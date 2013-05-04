@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PhoneSENSE</title>
+<style type="text/css">
+
+
+body
+{
+	background:#333333;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size:small;
+	margin:8px 0 16px;
+	text-align:center;
+}
+
+
+.MainForm {
+	font-family: Roboto, "Roboto Cn", "Roboto Th";
+	font-size: 14px;
+	font-style: normal;
+	background-color: #FFF;
+	width: 640px;
+	position: fixed;
+	font-weight: bold;
+	align:center;
+	font-variant: normal;
+}
+
+#form_container
+{
+	background:#ffffff;
+	padding: 5px;
+	margin:0 auto;
+	text-align:left;
+	width:640px;
+}
+
+
+.footer{
+
+	position:absolute;
+	align:center;
+	bottom:0px;
+	padding: 5px;
+	margin:0 auto;
+	text-align:left;
+	width:640px;
+}
+
+.MainForm1 {
+	font-family: Roboto, "Roboto Cn", "Roboto Th";
+	font-size: 13px;
+	font-style: normal;
+	background-color: #FFF;
+	
+	position: relative;
+	font-weight: bold;
+	align: center;
+	margin:20px 20px 0;
+	padding:0 0 20px;
+	
+
+	font-variant: normal;
+}
+
+.separator{
+
+	width=100%;
+	height=5px;
+	background-color: 333333;
+}
+
+.centered {  
+  position:fixed;
+  z-index: 100;  
+  top:50%;  
+  left:50%;  
+  margin:-100px 0 0 -100px;  
+  width:200px;  
+  height:200px;  
+} 
+
+
+.linkbutton {
+	background-image: url(/static/phonesense/button.png);
+	text-decoration: none;
+	height:100%;
+	width:100%;
+	display: block;
+
+	color: #FFFFFF;
+
+}
+
+.form_description h2
+{
+	font-family: Roboto, "Roboto Cn", "Roboto Th";
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-style: bold;
+	clear:left;
+	background: #FFF;
+	color:#3fada8;
+	font-size:160%;
+	font-weight:400;
+	width:640px;
+	margin:0 0 3px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+
+<div align="center" style="margin-bottom:5px;padding:5px;">
+	<img src="/static/phonesense/top3.png" width="640" height="180" />
+</div>
+
+<div id="separator"></div>
+
+
+
+
+<div></div>	
+
+<div id="form_container">
+
+<div class="form_description" style="padding-left:5px">
+	<h2>Welcome</h2>
+</div>	
+<div class="MainForm1">
+
+
+  <p align="left">This is the home page of the PhoneSENSE project. This project was developed as part of the CSE534:Advanced Mobile Computing Course at <a href="http://www.iiitd.ac.in" >IIIT-Delhi.</a></p>
+  <p align="left">This is a phone sensing platform currently available for Android as a library. This makes making applications for sensing data from mobile phones far cleaner and simpler than the native android library. There is also a server for collecting this information developed in Django. The source code for both can be found below along with instructions to set up both.</p>
+  <p align="left"><br />
+  </p>
+  <p align="left">	For users creating the study the register page link and the admin panel can also be found below.</p>
+  <br />
+	</div>
+	</div>
+	<div class="form_container" align="center" background-color:"#FFFFFF">
+		<table width="378">
+			<tr align="center">
+				<td width="160" align="center">
+					<div align="center" >
+					<a href="/phonesense/admin" class="linkbutton">Admin Panel</a>
+					</div>
+				</td>
+				<td width="166">
+					<div align="center" >
+					<a href="/phonesense/register" class="linkbutton">Register a New Service</a>
+					</div>
+				</td>
+				
+			</tr>
+			<tr align="center">
+				<td align="center">
+					<div align="center" >
+					<a href="/phonesense/documentation" class="linkbutton">Documentation</a>
+					</div>
+				</td>
+				<td align="center">
+					<div align="center" >
+					<a href="/phonesense/source" class="linkbutton" >Source Code</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+</div>
+
+
+
+
+
+
+
+</body>
+
+<div id="form_container">
+<div class="footer" align="center" style="padding:5px"><img src="/static/phonesense/bottom2.png" width="640" height="30" /></div>
+
+</div>
+
+</html>

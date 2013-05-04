@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PhonseSENSE-Documentation</title>
+<style type="text/css">
+
+
+body
+{
+	background:#333333;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size:small;
+	margin:8px 0 16px;
+	text-align:center;
+}
+
+
+.MainForm {
+	font-family: Roboto, "Roboto Cn", "Roboto Th";
+	font-size: 14px;
+	font-style: normal;
+	background-color: #FFF;
+	width: 640px;
+	position: fixed;
+	font-weight: bold;
+	align:center;
+	font-variant: normal;
+}
+
+#form_container
+{
+	background:#ffffff;
+	padding: 5px;
+	margin:0 auto;
+	text-align:left;
+	width:640px;
+}
+
+
+
+
+.MainForm1 {
+	font-family: Roboto, "Roboto Cn", "Roboto Th";
+	font-size: 13px;
+	font-style: normal;
+	background-color: #FFF;
+	
+	position: relative;
+	font-weight: bold;
+	align: center;
+	margin:20px 20px 0;
+	padding:0 0 20px;
+	
+
+	font-variant: normal;
+}
+
+.separator{
+
+	width=100%;
+	height=5px;
+	background-color: 333333;
+}
+
+.footer{
+
+	position:absolute;
+	align:center;
+	bottom:0px;
+	padding: 5px;
+	margin:0 auto;
+	text-align:left;
+	width:640px;
+}
+
+
+
+.centered {  
+  position:fixed;
+  z-index: 100;  
+  top:50%;  
+  left:50%;  
+  margin:-100px 0 0 -100px;  
+  width:200px;  
+  height:200px;  
+} 
+
+
+.linkbutton {
+	background-image: url(button.png);
+	text-decoration: none;
+	height:100%;
+	width:100%;
+	display: block;
+
+	color: #FFFFFF;
+
+}
+
+.form_description h2
+{
+	font-family: Roboto, "Roboto Cn", "Roboto Th";
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-style: bold;
+	clear:left;
+	background: #FFF;
+	color:#3fada8;
+	font-size:160%;
+	font-weight:400;
+	width:640px;
+	margin:0 0 3px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+
+<div align="center" style="margin-bottom:5px;padding:5px;">
+	<img src="/static/phonesense/top3.png" width="640" height="180" />
+</div>
+
+<div id="separator"></div>
+
+
+
+
+<div></div>	
+
+<div id="form_container">
+
+<div class="form_description" style="padding-left:5px">
+	<h2>Documentation</h2>
+</div>	
+<div class="MainForm1">
+
+
+  <p align="left">	The Android Library needs to be added to your Eclipse workspace and then added as a library to that project. Also after adding the library please check if the external libraries are referenced properly if not then you can find them under the Reflibs folder.
+
+  Also the following permissions needed to be added to the manifest of your application for the library to be used:
+
+
+
+  </p>
+    <blockquote>
+      <p>&lt;uses-permission android:name=&quot;android.permission.BATTERY_STATS&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.CHANGE_WIFI_STATE&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.ACCESS_MOCK_LOCATION&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot;/&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot;/&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot;&gt;&lt;/uses-permission&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.GET_ACCOUNTS&quot;/&gt;<br />
+        &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;</p>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p>Also the following services need to be added:</p>
+    <blockquote>
+      <p> &lt;receiver android:name=&quot;com.iiitd.phonesense.AlarmHandler&quot;&gt;&lt;/receiver&gt;<br />
+        &lt;service android:name=&quot;com.iiitd.phonesense.datasense.WifiState&quot;&gt;&lt;/service&gt;<br />
+        &lt;service android:name=&quot;com.iiitd.phonesense.datasense.BatteryState&quot;&gt;&lt;/service&gt;<br />
+        &lt;service android:name=&quot;com.iiitd.phonesense.datasense.BluetoothState&quot;&gt;&lt;/service&gt;<br />
+        &lt;service android:name=&quot;com.iiitd.phonesense.datasense.GSMState&quot;&gt;&lt;/service&gt;<br />
+        &lt;service android:name=&quot;com.iiitd.phonesense.datasense.LocationState&quot;&gt;&lt;/service&gt;<br />
+        &lt;service android:name=&quot;com.iiitd.phonesense.datasense.PhoneState&quot;&gt;&lt;/service&gt;<br />
+        &lt;service android:name=&quot;com.iiitd.phonesense.UploadService&quot;&gt;&lt;/service&gt;</p>
+    </blockquote>
+    <p>Once you have added these, to start the app and sensing </p>
+    <p>StartLocTrack.StartDataCollection(getApplicationContext(),&quot;serverurlhere&quot;); </p>
+    <p>this call gets the sensing started with a first initialization handshake with the server. The device is identified with its IMEI.</p>
+    <p><br />
+  </p>
+
+
+  
+	</div>
+	</div>
+<div  align="center" style="padding:5px"><img src="/static/phonesense/bottom2.png" width="640" height="30" /></div>
+
+
+
+</body>
+
+
+
+</div>
+
+</html>

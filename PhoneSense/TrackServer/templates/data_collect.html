@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PhoneSense</title>
+<link rel="stylesheet" type="text/css" href="/static/phonesense/view.css" media="all">
+<script type="text/javascript" src="/static/phonesense/view.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> 
+
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.min.js"></script>
+
+<script type="text/javascript">    $(document).ready(function(){    $("#reg_form").validate();    }); </script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="/static/phonesense/top3.png" alt="">
+	<div id="form_container">
+	
+		
+		<form id="reg_form" class="appnitro" enctype="multipart/form-data" method="POST" action="/phonesense/submit">
+					<div class="form_description">
+			<h2>Start a new Collection here</h2>
+			
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="Study_Name">Enter Name of Study </label>
+		<div>
+			<input id="Study_Name" name="Study_Name" class="element text medium required" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_2" >
+		<label class="description" for="User_Name">Enter Your Name </label>
+		<span>
+			<input id="User_Name_1" name= "User_Name_1" class="element text required" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="User_Name_2" name= "User_Name_2" class="element text required" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span> 
+		</li>		
+
+		
+		
+		
+		<li id="li_4" >
+		<label class="description" for="Data_Types">Select Data to be collected </label>
+		<table width="640">
+		<span>
+			<table width="640">
+			<tr>
+				<td width="150">
+			<input id="Wifi_chckbx" name="Data_Types_Wifi_chckbx" class="element checkbox" type="checkbox" value="1" />
+			<label class="choice" for="Data_Types_Wifi_chckbx">Wifi</label>
+		</td><td>
+			<select class="element select medium" id="Wifi_Freq" name="Wifi_Freq"> 
+			<option value="0" selected="selected">Collection Frequency</option>
+			<option value="5" >5 minutes</option>
+			<option value="10" >10 minutes</option>
+			<option value="15" >15 minutes</option>
+            <option value="30" >30 minutes</option>
+			</select></td>
+			</tr>
+
+			<tr>
+				<td>
+			<input id="Bluetooth_chckbx" name="Data_Types_Bluetooth_chckbx" class="element checkbox" type="checkbox" value="1" />
+			<label class="choice" for="Data_Types_Bluetooth_chckbx">Bluetooth</label>
+		</td><td>
+			<select class="element select medium" id="Bluetooth_Freq" name="Bluetooth_Freq"> 
+			<option value="0" selected="selected">Collection Frequency</option>
+			<option value="5" >5 minutes</option>
+			<option value="10" >10 minutes</option>
+			<option value="15" >15 minutes</option>
+            <option value="30" >30 minutes</option>
+			</select>
+		</td>
+			</tr>
+
+
+			<tr>
+				<td>
+			<input id="GSM_chckbx" name="Data_Types_GSM_chckbx" class="element checkbox" type="checkbox" value="1" />
+			<label class="choice" for="Data_Types_GSM_chckbx">GSM </label>
+			</td><td>
+				<select class="element select medium" id="GSM_Freq" name="GSM_Freq"> 
+					<option value="0" selected="selected">Collection Frequency</option>
+			        <option value="5" >5 minutes</option>
+			        <option value="10" >10 minutes</option>
+			        <option value="15" >15 minutes</option>
+                    <option value="30" >30 minutes</option>
+				</select>
+			</td>
+			</tr>
+
+			<tr>
+				<td>
+			<input id="GPS_chckbx" name="Data_Types_GPS_chckbx" class="element checkbox" type="checkbox" value="1" />
+			<label class="choice" for="Data_Types_GPS_chckbx">GPS</label>
+			</td><td>
+				<select class="element select medium" id="GPS_Freq" name="GPS_Freq"> 
+					<option value="0" selected="selected">Collection Frequency</option>
+			        <option value="5" >5 minutes</option>
+			        <option value="10" >10 minutes</option>
+			        <option value="15" >15 minutes</option>
+                    <option value="30" >30 minutes</option>
+				</select>
+			</td>
+			</tr>
+
+
+			<tr>
+			<td>
+			<input id="PhoneState_chckbx" name="Data_Types_PhoneState_chckbx" class="element checkbox" type="checkbox" value="1" />
+			<label class="choice" for="Data_Types_PhoneState_chckbx">Phone State</label>
+			</td><td>
+			<select class="element select medium" id="PhoneState_Freq" name="PhoneState_Freq"> 
+				<option value="0" selected="selected">Collection Frequency</option>
+			    <option value="5" >5 minutes</option>
+			    <option value="10" >10 minutes</option>
+			    <option value="15" >15 minutes</option>
+                <option value="30" >30 minutes</option>
+			</select>
+		</td>
+			</tr>
+
+
+			<tr>
+				<td>
+			<input id="Battery_chckbx" name="Data_Types_element_Battery_chckbx" class="element checkbox" type="checkbox" value="1" />
+			<label class="choice" for="Data_Types_element_Battery_chckbx">Battery</label>
+			</td><td>
+			<select class="element select medium" id="Battery_Freq" name="Battery_Freq"> 
+				<option value="0" selected="selected">Collection Frequency</option>
+			    <option value="5" >5 minutes</option>
+			    <option value="10" >10 minutes</option>
+			    <option value="15" >15 minutes</option>
+                <option value="30" >30 minutes</option>
+			</select>
+			<td>
+				
+			</tr>		
+
+		</span> 
+		</table>
+		</li>		
+		
+		
+		<li id="li_7" >
+		<label class="description" for="Upload_Freq">Select Data Upload Frequency </label>
+		<div>
+		<select class="element select medium required" id="Upload_Freq" name="Upload_Freq">
+			<option value="30" selected="selected">30 minutes</option>
+			<option value="60" >60 minutes</option>
+			<option value="90" >90 minutes</option>
+
+		</select>
+		</div><p class="guidelines required" id="guide_5"><small>Select Frequency of collection</small></p> 
+		</li>		
+
+
+
+		
+
+		<li id="li_3" >
+		<label class="description" for="File_upload">Upload IMEI File </label>
+		<div>
+			<input id="File_upload" name="File_upload" class="element file required" type="file"/>
+		</div> <p class="guidelines" id="guide_3"><small>Please give the file containing the list of IMEI's in .txt format</small></p> 
+		</li>
+
+
+		<div class="wrapper" align="center">
+			    
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+
+			</div>
+		
+
+			</ul>
+		</form>	
+
+
+	
+
+
+
+		
+	</div>
+	<div ></div>
+	<img id="bottom" src="/static/phonesense/bottom2.png"  alt="">
+	</body>
+</html>
